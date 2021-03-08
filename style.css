@@ -8,3 +8,6 @@ body{
 .shadow{
     box-shadow: 5em;
 }
+.text-muted{
+    color: white!important;
+}
