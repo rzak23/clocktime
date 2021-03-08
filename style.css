@@ -1,0 +1,10 @@
+body{
+    background-color: #b2bec3;
+}
+.timecnt{
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 80px;
+}
+.shadow{
+    box-shadow: 5em;
+}
