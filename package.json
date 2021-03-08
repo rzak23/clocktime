@@ -1,20 +1,32 @@
 {
   "name": "clocktime",
   "version": "1.0.0",
-  "description": "",
   "main": "main.js",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
     "bootstrap": "^4.6.0",
-    "electron": "^12.0.0",
     "jquery": "^3.6.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "electron": "^12.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron ."
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": [
+    "clocktime",
+    "timer"
+  ],
+  "author": "Reza Akbar Hidayat",
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rzak23/clocktime.git"
+  },
+  "bugs": {
+    "url": "https://github.com/rzak23/clocktime/issues"
+  },
+  "homepage": "https://github.com/rzak23/clocktime#readme",
+  "description": ""
 }
