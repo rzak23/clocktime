@@ -1,9 +1,13 @@
 const { app, BrowserWindow } = require('electron')
+require('update-electron-app')({
+  updateInterval: '1 hour'
+})
 
 function createWindow () {
   const win = new BrowserWindow({
     width: 1080,
     height: 400,
+    icon: __dirname + '/build/icon.png',
     webPreferences: {
       nodeIntegration: true
     }
