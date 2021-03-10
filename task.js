@@ -22,6 +22,8 @@ $(document).ready(function(){
             $('#clock').hide(500);
             $('#timer').hide(500);
             $('#alarm').show(500);
+        }else if(menu == "update"){
+            openUpdate();
         }
     })
 
@@ -31,6 +33,14 @@ $(document).ready(function(){
     $('#alarm').hide();
 
     function jam_now(){
+        var weekday = new Array(7);
+        weekday[0] = "Minggu";
+        weekday[1] = "Senin";
+        weekday[2] = "Selasa";
+        weekday[3] = "Rabu";
+        weekday[4] = "Kamis";
+        weekday[5] = "Jum\'at";
+        weekday[6] = "Sabtu";
         var d = new Date();
 
         var year = d.getFullYear();
@@ -39,9 +49,10 @@ $(document).ready(function(){
         var hour = d.getHours();
         var minute = d.getMinutes();
         var sec = d.getSeconds();
+        var mday = weekday[d.getDay()];
 
         var watch = hour+":"+minute+":"+sec;
-        var calendar = day+"/"+month+"/"+year;
+        var calendar = day+"/"+month+"/"+year+"<br>"+mday;
 
         $('#show_watch').html(watch);
         $('#show_cal').html(calendar);
@@ -56,14 +67,15 @@ $(document).ready(function(){
 
     $('#btnStart').click(function(){
         var min = $('#minute').val();
+        var msg = $('#cnotif').val();
         var time = min * 60;
 
         // setInterval(updateCount,1000);
-        startWaktu(time);
+        startWaktu(time, msg);
         $('#form').trigger('reset');
     })
 
-    function startWaktu(time){
+    function startWaktu(time, psn){
         var t = setInterval(function(){
             var minute = Math.floor(time/60);
             var second = time % 60;
@@ -72,18 +84,22 @@ $(document).ready(function(){
             $('#show_time').html(page);
             time--;
             if(page == "0:0"){
-                stopWaktu(t);
+                stopWaktu(t, psn);
             }
         },1000);
     }
 
-    function stopWaktu(t){
+    function stopWaktu(t, psn){
         clearInterval(t);
         $('#show_time').html('time\'s up');
         var audio = new Audio('sound/tekotok.mp3');
         audio.play();
         const notificationTimes = new Notification('Waktu Habis',{
-            body: "Batas Waktu yang tersedia sudah habis"
+            body: psn
         })
+    }
+
+    function openUpdate(){
+        window.open('https://github.com/rzak23/clocktime/releases');
     }
 })
