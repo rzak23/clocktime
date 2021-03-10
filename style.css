@@ -1,13 +1,23 @@
 body{
-    background-color: #b2bec3;
+    background-color: #70a1ff;
 }
 .timecnt{
     font-family: 'DotGothic16', sans-serif;
     font-size: 60px;
+    color: white;
+}
+.dateshow{
+    font-family: 'DotGothic16', sans-serif;
+    font-size: 40px;
+    color: white;
 }
 .shadow{
     box-shadow: 5em;
 }
 .text-muted{
     color: white!important;
+}
+.card-body{
+    background-color: #1e90ff;
+    opacity: 0.8;
 }
