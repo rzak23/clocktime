@@ -9,18 +9,26 @@ $(document).ready(function(){
             $(this).addClass('active');
             $('#timer').hide(500);
             $('#clock').show(500);
-        }else if (menu == "timer"){
+            $('#alarm').hide(500);
+        }else if(menu == "timer"){
             $('.nav-link').removeClass('active');
             $(this).addClass('active');
             $('#clock').hide(500);
             $('#timer').show(500);
+            $('#alarm').hide(500);
+        }else if(menu == "alarm"){
+            $('.nav-link').removeClass('active');
+            $(this).addClass('active');
+            $('#clock').hide(500);
+            $('#timer').hide(500);
+            $('#alarm').show(500);
         }
-        $('#clock').show();
     })
 
 
     setInterval(jam_now,1000);
     $('#timer').hide();
+    $('#alarm').hide();
 
     function jam_now(){
         var d = new Date();
@@ -70,9 +78,10 @@ $(document).ready(function(){
     }
 
     function stopWaktu(t){
-        // var cache = startWaktu(0);
         clearInterval(t);
         $('#show_time').html('time\'s up');
+        var audio = new Audio('sound/tekotok.mp3');
+        audio.play();
         const notificationTimes = new Notification('Waktu Habis',{
             body: "Batas Waktu yang tersedia sudah habis"
         })
