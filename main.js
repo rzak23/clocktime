@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow } = require('electron');
 require('update-electron-app')({
   updateInterval: '1 hour'
 })
@@ -9,11 +9,12 @@ function createWindow () {
     height: 400,
     icon: __dirname + '/build/icon.png',
     webPreferences: {
-      nodeIntegration: true
+      enableRemoteModule: false,
     }
   })
 
-  win.loadFile('index.html')
+  win.loadFile('index.html');
+  // win.removeMenu();
 }
 
 app.whenReady().then(createWindow)
