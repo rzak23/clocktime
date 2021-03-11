@@ -8,13 +8,10 @@ function createWindow () {
     width: 1080,
     height: 400,
     icon: __dirname + '/build/icon.png',
-    webPreferences: {
-      enableRemoteModule: false,
-    }
   })
 
   win.loadFile('index.html');
-  // win.removeMenu();
+  win.removeMenu();
 }
 
 app.whenReady().then(createWindow)
