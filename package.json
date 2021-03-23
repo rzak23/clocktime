@@ -1,6 +1,6 @@
 {
   "name": "clocktime",
-  "version": "1.0.2",
+  "version": "1.3.4",
   "main": "main.js",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
@@ -23,6 +23,7 @@
     "timer"
   ],
   "author": "Reza Akbar Hidayat",
+  "email": "reza.akbar2396@gmail.com",
   "license": "ISC",
   "repository": {
     "type": "git",
