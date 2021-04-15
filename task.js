@@ -95,7 +95,9 @@ $(document).ready(function(){
         var audio = new Audio('sound/tekotok.mp3');
         audio.play();
         const notificationTimes = new Notification('Waktu Habis',{
-            body: psn
+            title: 'Time\'s Up',
+            body: psn,
+            icon: 'build/icon.png'
         })
     }
 
@@ -158,9 +160,5 @@ $(document).ready(function(){
             
             setTimeout(timerCyle,1000);
         }
-    }
-
-    function openUpdate(){
-        window.open('https://github.com/rzak23/clocktime/releases');
     }
 })
