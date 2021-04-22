@@ -1,6 +1,6 @@
 {
   "name": "clocktime",
-  "version": "1.4.7",
+  "version": "1.5.8",
   "main": "main.js",
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.2",
@@ -32,5 +32,5 @@
     "url": "https://github.com/rzak23/clocktime/issues"
   },
   "homepage": "https://github.com/rzak23/clocktime#readme",
-  "description": ""
+  "description": "Aplikasi penampil jam dan tanggal yang dilengkapi hari libur nasional Indonesia, stopwatch dan juga timer"
 }
