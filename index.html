@@ -19,11 +19,11 @@
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
+          <ul class="navbar-nav me-auto">
             <li class="nav-item">
               <a class="nav-link active" href="#" data="clock">Clock <span class="sr-only">(current)</span></a>
             </li>
@@ -36,7 +36,7 @@
           </ul>
           <ul class="navbar-nav">
             <li class="nav-item">
-                <a class="nav-link" href="#" data-toggle="modal" data-target="#about">
+                <a class="nav-link" href="#" data-bs-toggle="modal" data-bs-target="#about">
                     <i class="fas fa-exclamation-circle"></i>
                 </a>
             </li>
@@ -130,7 +130,7 @@
                         <div id="appMail"></div>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" class="btn btn-primary btn-block" data-dismiss="modal">
+                        <button type="button" class="btn btn-primary btn-block" data-bs-dismiss="modal">
                             <i class="fas fa-times"></i>
                             <span>Tutup</span>
                         </button>
@@ -150,8 +150,8 @@
         $(document).ready(function(){
             $.getJSON('./package.json',function(data){
                 $('#appVersion').html("Version :<br> "+data.version);
-                $('#appAuthor').html("Author :<br> "+data.author);
-                $('#appMail').html("Email :<br>"+data.email);
+                $('#appAuthor').html("Author :<br> "+data.author.name);
+                $('#appMail').html("Email :<br>"+data.author.email);
             })
         })
     </script>
